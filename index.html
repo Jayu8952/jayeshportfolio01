@@ -3,281 +3,357 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jayesh Patil - BCA graduate, aspiring Data Scientist and Python developer.">
-    <title>Jayesh Patil | Portfolio</title>
+    <title>Jayesh Patil | Data Science & Python Developer</title>
+    <meta name="description" content="Portfolio of Jayesh Patil, BCA graduate and aspiring Data Scientist skilled in Python, SQL and Power BI.">
+    <meta name="theme-color" content="#0b0a09">
+    <meta property="og:title" content="Jayesh Patil | Data Science & Python Developer">
+    <meta property="og:description" content="BCA graduate. Python, SQL, Power BI, Pandas, web development.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23ff8a4c'/><stop offset='1' stop-color='%23ff5d8f'/></linearGradient></defs><rect width='100' height='100' rx='26' fill='url(%23g)'/><text x='50' y='67' font-size='52' font-family='Arial' font-weight='700' text-anchor='middle' fill='%231a0e06'>JP</text></svg>">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script>
+        try { var t = localStorage.getItem("theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+    </script>
     <link rel="stylesheet" href="style.css">
+    <noscript>
+        <style>
+            #intro{display:none}
+            .hero-reveal,.reveal{opacity:1!important;transform:none!important}
+            body.intro-active .hero-photo img{visibility:visible!important}
+            body.intro-active{overflow:auto!important}
+        </style>
+    </noscript>
 </head>
 
-<body>
+<body class="intro-active">
 
-<!-- Background layers -->
-<div class="bg-mesh"></div>
-<div class="bg-grid"></div>
-<div class="bg-grain"></div>
-<div class="scroll-progress" id="scrollProgress"></div>
-
-<!-- Preloader -->
-<div id="preloader">
-    <div class="loader-text">JP<span>.</span></div>
+<!-- ============ APPLE-STYLE INTRO ============ -->
+<div id="intro" aria-hidden="true">
+    <div class="intro-hello" id="introHello"></div>
+    <img id="introPhoto" src="image/profile.jpeg" alt="">
+    <button id="skipIntro" type="button">Skip</button>
 </div>
 
-<!-- Navbar -->
+<a href="#main" class="skip">Skip to content</a>
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="bg-aurora"><i></i><i></i><i></i></div>
+<div class="bg-grid"></div>
+<div class="bg-grain"></div>
+
+<!-- ============ NAV ============ -->
 <header id="header">
-    <nav>
-        <a href="#home" class="logo">Jayesh<span>.</span></a>
+    <nav class="container">
+        <a href="#home" class="logo"><span class="logo-mark">JP</span> Jayesh Patil</a>
         <ul id="navLinks">
-            <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#journey">Journey</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="nav-right">
-            <button class="kbd-btn" id="openPalette" aria-label="Open command menu">
-                <i class="fas fa-search"></i> <span>Search</span> <kbd>Ctrl K</kbd>
+            <button class="kbd-btn" id="openPalette" aria-label="Open quick jump menu">
+                <i class="fas fa-magnifying-glass"></i><span>Quick jump</span><kbd>Ctrl K</kbd>
             </button>
-            <button class="menu-btn" id="menuBtn" aria-label="Menu"><i class="fas fa-bars"></i></button>
+            <button class="theme-btn" id="themeBtn" aria-label="Toggle dark and light theme"><i class="fas fa-moon"></i></button>
+            <a href="assets/resume.pdf" class="nav-cta" download>Resume</a>
+            <button class="menu-btn" id="menuBtn" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
         </div>
     </nav>
 </header>
 
-<main>
+<main id="main">
 
-<!-- HERO -->
-<section class="hero" id="home">
-    <div class="hero-left reveal">
-        <div class="badge"><span class="pulse"></span> Open to work</div>
-
-        <h1>Hi, I'm <span class="grad">Jayesh Patil</span></h1>
-        <h2><span class="typing"></span><span class="caret"></span></h2>
-
-        <p class="desc">
-            I build intelligent solutions using Data Science, Python and AI,
-            and love solving real-world problems with technology.
+<!-- ============ HERO ============ -->
+<section class="hero container" id="home">
+    <div class="hero-text">
+        <p class="status hero-reveal"><span class="dot"></span> Available for entry-level roles</p>
+        <h1 class="hero-reveal">Hi, I'm<br><span class="grad serif">Jayesh Patil</span></h1>
+        <h2 class="role hero-reveal"><span class="typing"></span><span class="caret"></span></h2>
+        <p class="summary hero-reveal">
+            I turn data into insight and ideas into working software. BCA graduate with hands-on
+            experience in Python, SQL, Power BI and web development.
         </p>
-
-        <div class="buttons">
-            <a href="#projects" class="btn magnetic">Explore Projects <i class="fas fa-arrow-right"></i></a>
-            <a href="assets/resume.pdf" class="btn btn-ghost magnetic" download><i class="fas fa-download"></i> Resume</a>
+        <div class="buttons hero-reveal">
+            <a href="#projects" class="btn btn-primary">View my work <i class="fas fa-arrow-right"></i></a>
+            <a href="#contact" class="btn btn-secondary">Contact me</a>
         </div>
-
-        <div class="social-icons">
+        <div class="links hero-reveal">
+            <!-- TODO: replace # with your real GitHub and LinkedIn URLs -->
             <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
             <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href="mailto:jp0607523@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
     </div>
 
-    <div class="hero-right reveal">
-        <div class="photo-wrap">
+    <div class="hero-photo">
+        <div class="photo-card">
             <div class="photo-glow"></div>
-            <div class="photo-ring">
-                <img src="image/profile.jpeg" alt="Jayesh Patil">
-            </div>
-            <div class="float-chip c1"><i class="fab fa-python"></i> Python</div>
-            <div class="float-chip c2"><i class="fas fa-database"></i> SQL</div>
-            <div class="float-chip c3"><i class="fas fa-chart-pie"></i> Power BI</div>
+            <img id="heroImg" src="image/profile.jpeg" alt="Portrait of Jayesh Patil" width="300" height="375" decoding="async">
         </div>
     </div>
 </section>
 
-<!-- STATS -->
-<section class="stats-wrap">
+<!-- ============ STATS ============ -->
+<section class="stats-wrap container">
     <div class="stats reveal">
-        <div class="stat"><h3 data-count="13">0</h3><p>Skills</p></div>
-        <div class="stat"><h3 data-count="5">0</h3><p>Projects</p></div>
+        <!-- TODO: update these numbers to match your real profile -->
         <div class="stat"><h3 data-count="3">0</h3><p>Internships</p></div>
-        <div class="stat"><h3 data-count="100" data-suffix="%">0</h3><p>Dedication</p></div>
+        <div class="stat"><h3 data-count="13">0</h3><p>Technologies</p></div>
+        <div class="stat"><h3 data-count="1">0</h3><p>Live project</p></div>
+        <div class="stat"><h3 data-count="1" data-suffix=" BCA">0</h3><p>Degree</p></div>
     </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-label="Technologies">
+    <div class="marquee-track">
+        <span><i class="fab fa-python"></i> Python</span><span><i class="fas fa-database"></i> SQL</span>
+        <span><i class="fas fa-chart-column"></i> Power BI</span><span><i class="fas fa-table"></i> Excel</span>
+        <span><i class="fas fa-table-cells"></i> Pandas</span><span><i class="fas fa-cube"></i> NumPy</span>
+        <span><i class="fas fa-brain"></i> Scikit-learn</span><span><i class="fab fa-java"></i> Java</span>
+        <span><i class="fab fa-html5"></i> HTML</span><span><i class="fab fa-css3-alt"></i> CSS</span>
+        <span><i class="fab fa-js"></i> JavaScript</span>
+        <span aria-hidden="true"><i class="fab fa-python"></i> Python</span><span aria-hidden="true"><i class="fas fa-database"></i> SQL</span>
+        <span aria-hidden="true"><i class="fas fa-chart-column"></i> Power BI</span><span aria-hidden="true"><i class="fas fa-table"></i> Excel</span>
+        <span aria-hidden="true"><i class="fas fa-table-cells"></i> Pandas</span><span aria-hidden="true"><i class="fas fa-cube"></i> NumPy</span>
+        <span aria-hidden="true"><i class="fas fa-brain"></i> Scikit-learn</span><span aria-hidden="true"><i class="fab fa-java"></i> Java</span>
+        <span aria-hidden="true"><i class="fab fa-html5"></i> HTML</span><span aria-hidden="true"><i class="fab fa-css3-alt"></i> CSS</span>
+        <span aria-hidden="true"><i class="fab fa-js"></i> JavaScript</span>
+    </div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="container">
     <div class="section-head reveal">
         <span class="eyebrow">01 / About</span>
-        <h2>About <span class="grad">Me</span></h2>
+        <h2>Curious, consistent and <span class="grad serif">hands-on</span></h2>
     </div>
-
     <div class="bento">
-        <div class="glass card span-2 reveal">
-            <h3><i class="fas fa-user-graduate"></i> Who I am</h3>
+        <div class="card b-wide reveal">
+            <h3><i class="fas fa-user"></i> Who I am</h3>
             <p>
-                I am a dedicated and enthusiastic BCA graduate with a strong academic background
-                in computer applications. I work with Python, SQL, Java, HTML, CSS, JavaScript and
-                Data Science tools, and I enjoy learning new technologies and turning ideas into
-                working products.
+                I am a dedicated BCA graduate with a strong foundation in computer applications.
+                I work with Python, SQL, Java and web technologies, and I am building my career in
+                Data Science. I enjoy learning new tools and turning real-world problems into
+                well-structured, working solutions.
             </p>
         </div>
-        <div class="glass card reveal">
-            <h3><i class="fas fa-bullseye"></i> Focus</h3>
-            <p>Data Science, Python development and building clean, useful web apps.</p>
-        </div>
-        <div class="glass card reveal">
+        <div class="card reveal">
             <h3><i class="fas fa-graduation-cap"></i> Education</h3>
             <p>Bachelor of Computer Applications (BCA)</p>
         </div>
-        <div class="glass card span-2 reveal">
-            <h3><i class="fas fa-lightbulb"></i> What drives me</h3>
-            <p>Curiosity, consistency and a habit of shipping small projects that solve real problems.</p>
+        <div class="card reveal">
+            <h3><i class="fas fa-bullseye"></i> Focus</h3>
+            <p>Data Science, analytics and Python development.</p>
+        </div>
+        <div class="card reveal">
+            <h3><i class="fas fa-seedling"></i> Learning</h3>
+            <p>Machine learning, data visualisation and clean code practices.</p>
+        </div>
+        <div class="card b-wide reveal">
+            <h3><i class="fas fa-handshake"></i> What I bring</h3>
+            <ul class="highlights">
+                <li>Strong fundamentals in programming and databases</li>
+                <li>Practical experience from three internships</li>
+                <li>Fast learner who enjoys solving real problems</li>
+            </ul>
         </div>
     </div>
 </section>
 
-<!-- SKILLS -->
-<section id="skills">
+<!-- ============ SERVICES ============ -->
+<section id="services" class="container">
     <div class="section-head reveal">
-        <span class="eyebrow">02 / Skills</span>
-        <h2>Tech <span class="grad">Stack</span></h2>
+        <span class="eyebrow">02 / What I do</span>
+        <h2>How I can <span class="grad serif">help</span></h2>
     </div>
-
-    <div class="skill-groups">
-        <div class="glass card reveal">
-            <h3>Data & Analytics</h3>
-            <div class="chips">
-                <span>Python</span><span>SQL</span><span>Power BI</span><span>Excel</span>
-                <span>Pandas</span><span>NumPy</span><span>Scikit-learn</span>
-            </div>
+    <div class="grid-3">
+        <div class="card service reveal">
+            <div class="icon-box"><i class="fas fa-chart-pie"></i></div>
+            <h3>Data Analysis</h3>
+            <p>Clean, explore and visualise data using Python, SQL, Excel and Power BI to find useful answers.</p>
         </div>
-        <div class="glass card reveal">
-            <h3>Programming</h3>
-            <div class="chips">
-                <span>Java</span><span>C</span><span>C++</span><span>Python</span>
-            </div>
+        <div class="card service reveal">
+            <div class="icon-box"><i class="fab fa-python"></i></div>
+            <h3>Python Development</h3>
+            <p>Scripts and applications that automate tasks and process data reliably, written in clean Python.</p>
         </div>
-        <div class="glass card reveal">
-            <h3>Web</h3>
-            <div class="chips">
-                <span>HTML</span><span>CSS</span><span>JavaScript</span>
-            </div>
+        <div class="card service reveal">
+            <div class="icon-box"><i class="fas fa-laptop-code"></i></div>
+            <h3>Web Development</h3>
+            <p>Responsive, fast websites and web apps built with HTML, CSS and JavaScript.</p>
         </div>
-    </div>
-
-    <div class="bars reveal">
-        <div class="bar-row"><p>Python <b>90%</b></p><div class="bar"><span data-w="90"></span></div></div>
-        <div class="bar-row"><p>SQL <b>80%</b></p><div class="bar"><span data-w="80"></span></div></div>
-        <div class="bar-row"><p>Web (HTML/CSS/JS) <b>75%</b></p><div class="bar"><span data-w="75"></span></div></div>
     </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects">
+<!-- ============ SKILLS ============ -->
+<section id="skills" class="container">
     <div class="section-head reveal">
-        <span class="eyebrow">03 / Work</span>
-        <h2>Featured <span class="grad">Projects</span></h2>
+        <span class="eyebrow">03 / Skills</span>
+        <h2>Tools I <span class="grad serif">work with</span></h2>
     </div>
+    <div class="grid-3">
+        <div class="card reveal">
+            <h3><i class="fas fa-chart-line"></i> Data &amp; Analytics</h3>
+            <ul class="tags"><li>Python</li><li>SQL</li><li>Pandas</li><li>NumPy</li><li>Scikit-learn</li><li>Power BI</li><li>Excel</li></ul>
+        </div>
+        <div class="card reveal">
+            <h3><i class="fas fa-terminal"></i> Programming</h3>
+            <ul class="tags"><li>Python</li><li>Java</li><li>C</li><li>C++</li></ul>
+        </div>
+        <div class="card reveal">
+            <h3><i class="fas fa-code"></i> Web Development</h3>
+            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+        </div>
+    </div>
+</section>
 
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="container">
+    <div class="section-head reveal">
+        <span class="eyebrow">04 / Projects</span>
+        <h2>Selected <span class="grad serif">work</span></h2>
+    </div>
     <div class="projects-grid">
-        <article class="glass card project reveal">
-            <div class="project-icon"><i class="fas fa-stopwatch"></i></div>
-            <h3>Online Quiz Platform</h3>
-            <p>Timer-based quiz application with automatic score calculation.</p>
-            <div class="chips small"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-            <div class="project-links">
-                <a href="#" class="link">Live Demo <i class="fas fa-arrow-up-right-from-square"></i></a>
-                <a href="#" class="link">Code <i class="fab fa-github"></i></a>
+        <article class="card project reveal">
+            <div class="cover cover-a"><i class="fas fa-stopwatch"></i></div>
+            <div class="project-body">
+                <div class="project-title">
+                    <h3>Online Quiz Platform</h3>
+                    <div class="project-links">
+                        <!-- TODO: add your real links -->
+                        <a href="#" aria-label="Source code"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Live demo"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <p>Timer-based quiz application with automatic score calculation and instant results.</p>
+                <!-- TODO: edit highlights to match what you actually built -->
+                <ul class="highlights">
+                    <li>Countdown timer per quiz with auto-submit</li>
+                    <li>Instant score calculation and result summary</li>
+                    <li>Responsive layout in vanilla JavaScript</li>
+                </ul>
+                <ul class="tags small"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
             </div>
         </article>
 
-        <article class="glass card project reveal">
-            <div class="project-icon"><i class="fas fa-plus"></i></div>
-            <h3>More coming soon</h3>
-            <p>Data science and Python projects are in progress. Add them here as you build them.</p>
-            <div class="chips small"><span>Python</span><span>Pandas</span></div>
+        <!-- TODO: duplicate the <article> above for each new project; use cover-a, cover-b or cover-c for different colours -->
+        <article class="card project project-empty reveal">
+            <div class="cover cover-b"><i class="fas fa-chart-column"></i></div>
+            <div class="project-body">
+                <h3>Data Analysis Project</h3>
+                <p>A Pandas / Power BI analysis project is in progress. Add it here when ready.</p>
+                <ul class="tags small"><li>Python</li><li>Pandas</li><li>Power BI</li></ul>
+            </div>
         </article>
     </div>
 </section>
 
-<!-- CERTIFICATES -->
-<section id="certificates">
+<!-- ============ JOURNEY ============ -->
+<section id="journey" class="container">
     <div class="section-head reveal">
-        <span class="eyebrow">04 / Experience</span>
-        <h2>Certificates & <span class="grad">Internships</span></h2>
+        <span class="eyebrow">05 / Journey</span>
+        <h2>Education &amp; <span class="grad serif">experience</span></h2>
     </div>
-
-    <div class="timeline">
-        <div class="glass card tl-item reveal"><i class="fas fa-award"></i><div><h3>CodSoft Internship</h3><p>Internship certificate</p></div></div>
-        <div class="glass card tl-item reveal"><i class="fas fa-award"></i><div><h3>Oasis Infobyte Internship</h3><p>Internship certificate</p></div></div>
-        <div class="glass card tl-item reveal"><i class="fas fa-award"></i><div><h3>AICTE Internship</h3><p>Internship certificate</p></div></div>
-    </div>
+    <ol class="timeline">
+        <!-- TODO: add dates and one line about what you actually did in each internship -->
+        <li class="reveal">
+            <span class="tl-dot"></span>
+            <div class="card">
+                <span class="tl-tag">Internship</span>
+                <h3>AICTE</h3>
+                <p>Virtual internship focused on practical, industry-oriented skills.</p>
+            </div>
+        </li>
+        <li class="reveal">
+            <span class="tl-dot"></span>
+            <div class="card">
+                <span class="tl-tag">Internship</span>
+                <h3>Oasis Infobyte</h3>
+                <p>Completed hands-on tasks and projects as part of the internship programme.</p>
+            </div>
+        </li>
+        <li class="reveal">
+            <span class="tl-dot"></span>
+            <div class="card">
+                <span class="tl-tag">Internship</span>
+                <h3>CodSoft</h3>
+                <p>Built practical projects and strengthened programming fundamentals.</p>
+            </div>
+        </li>
+        <li class="reveal">
+            <span class="tl-dot"></span>
+            <div class="card">
+                <span class="tl-tag edu">Education</span>
+                <h3>Bachelor of Computer Applications</h3>
+                <p>Foundation in programming, databases, data structures and software development.</p>
+            </div>
+        </li>
+    </ol>
 </section>
 
-<!-- TERMINAL -->
-<section id="terminal">
-    <div class="section-head reveal">
-        <span class="eyebrow">05 / Play</span>
-        <h2>Interactive <span class="grad">Terminal</span></h2>
-    </div>
-
-    <div class="terminal-box reveal">
-        <div class="terminal-header">
-            <i class="dot red"></i><i class="dot yellow"></i><i class="dot green"></i>
-            <p>jayesh@portfolio ~ </p>
-        </div>
-        <div id="output">
-            <p>Welcome to Jayesh's portfolio terminal.</p>
-            <p>Type <span class="cmd">help</span> to begin.</p>
-        </div>
-        <div class="input-area">
-            <span>&gt;</span>
-            <input type="text" id="command" placeholder="Enter command..." autocomplete="off" spellcheck="false">
-        </div>
-    </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-    <div class="section-head reveal">
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="container">
+    <div class="contact card reveal">
         <span class="eyebrow">06 / Contact</span>
-        <h2>Let's <span class="grad">Connect</span></h2>
-    </div>
-
-    <div class="contact-card glass reveal">
-        <p>Have an opportunity or an idea? My inbox is open.</p>
-        <a href="mailto:jp0607523@gmail.com" class="btn magnetic"><i class="fas fa-envelope"></i> jp0607523@gmail.com</a>
-        <div class="social-icons center">
-            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        </div>
+        <h2>Let's build something <span class="grad serif">together</span></h2>
+        <p>I am open to entry-level opportunities in data and software. Send a message and I will reply soon.</p>
+        <form class="contact-form" id="contactForm" novalidate>
+            <div class="row">
+                <label>Name<input type="text" id="cfName" required autocomplete="name"></label>
+                <label>Email<input type="email" id="cfEmail" required autocomplete="email"></label>
+            </div>
+            <label>Message<textarea id="cfMessage" rows="5" required></textarea></label>
+            <p class="form-error" id="formError" role="alert"></p>
+            <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send message</button>
+            <p class="form-note">Opens your email app with the message ready to send.</p>
+        </form>
     </div>
 </section>
 
 </main>
 
 <footer>
-    <p>&copy; <span id="year"></span> Jayesh Patil. Designed & built with ❤️</p>
+    <div class="container footer-inner">
+        <p>&copy; <span id="year"></span> Jayesh Patil. All rights reserved.</p>
+        <div class="links">
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:jp0607523@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+    </div>
 </footer>
 
 <!-- Command palette -->
 <div class="palette" id="palette" aria-hidden="true">
-    <div class="palette-box">
-        <input type="text" id="paletteInput" placeholder="Jump to a section..." autocomplete="off">
+    <div class="palette-box" role="dialog" aria-label="Quick jump">
+        <input type="text" id="paletteInput" placeholder="Jump to..." autocomplete="off">
         <ul id="paletteList"></ul>
-        <p class="palette-hint">↑ ↓ to navigate · Enter to open · Esc to close</p>
+        <p class="palette-hint">&uarr; &darr; navigate &middot; Enter open &middot; Esc close</p>
     </div>
 </div>
 
-<!-- Chat assistant -->
+<!-- Assistant -->
 <div class="ai-bot">
     <div class="chat-window" id="chatWindow">
-        <div class="chat-header"><span>🤖 Jayesh's Assistant</span><button id="closeChat" aria-label="Close">&times;</button></div>
+        <div class="chat-header"><span>Ask about Jayesh</span><button id="closeChat" aria-label="Close chat">&times;</button></div>
         <div class="chat-body" id="chatBody">
-            <div class="bot-msg">Hello 👋 I'm Jayesh's assistant. Ask about skills, projects, contact or resume.</div>
+            <div class="bot-msg">Hi! Ask me about skills, projects, internships or contact details.</div>
         </div>
         <div class="chat-input">
-            <input type="text" id="userMessage" placeholder="Ask something..." autocomplete="off">
+            <input type="text" id="userMessage" placeholder="Type a question..." autocomplete="off">
             <button id="sendBtn" aria-label="Send"><i class="fas fa-paper-plane"></i></button>
         </div>
     </div>
-    <button class="chat-btn" id="chatToggle" aria-label="Open chat"><i class="fas fa-robot"></i></button>
+    <button class="chat-btn" id="chatToggle" aria-label="Open chat"><i class="fas fa-comment-dots"></i></button>
 </div>
 
-<!-- Custom cursor (desktop only) -->
 <div class="cursor"></div>
 <div class="cursor-dot"></div>
 
